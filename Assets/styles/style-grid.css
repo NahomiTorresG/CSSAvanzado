@@ -1,0 +1,67 @@
+.grid-container{
+    text-align: center; /*alinear elementos al centro*/
+    display: grid; /*Implica la forma en que se muestran los elementos*/
+    grid-template-columns: auto auto auto auto; /*Indica cuantas columnas vamos a utilizar*/
+    gap: 10px;
+}
+
+.grid-container > div {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: bisque;
+}
+
+
+#Item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+
+.barranavegacion{
+    background-color: orange;
+    grid-area: barranavegacion;
+}
+
+.imagenes{
+    background-color: violet;
+    grid-area: imagenes;
+}
+
+.parrafo1{
+    background-color: red;
+    grid-area: parrafo1;
+}
+
+.parrafo2{
+    background-color: yellow;
+    grid-area: parrafo2;
+}
+
+.boton1{
+    background-color: blue;
+    grid-area: boton1;
+}
+
+.boton2{
+    background-color: brown;
+    grid-area: boton2;
+}
+
+.footer{
+    background-color: aqua;
+    grid-area: footer;
+}
+
+
+.container-excel{
+    display: grid;
+    grid-template-areas: "barranavegacion barranavegacion barranavegacion"
+                         "imagenes parrafo1 parrafo2"
+                         "imagenes boton1 boton2"
+                         "footer footer footer";
+                         grid-template-rows: 100px 100px 100px;
+                         grid-template-columns: repeat(3, 300px);
+                         grid-template-rows: repeat(4, auto);
+}
